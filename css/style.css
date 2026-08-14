@@ -1,0 +1,819 @@
+/* ==================================================
+   DEE MARBLE & GRANITE
+   MAIN WEBSITE STYLESHEET
+   ================================================== */
+
+
+/* ================= GENERAL SETTINGS ================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222222;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background-color: #171717;
+    color: white;
+    padding: 25px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.logo p {
+    color: #b89b5e;
+    font-size: 14px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b89b5e;
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    .hero {
+    min-height: 400px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 40px;
+}
+
+    background-color: #444444;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    color: #b89b5e;
+
+    font-family: Georgia, serif;
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.button {
+    display: inline-block;
+
+    background-color: #b89b5e;
+
+    color: white;
+
+    padding: 14px 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: #8f763f;
+}
+
+
+/* ================= INTRODUCTION ================= */
+
+.introduction {
+    background-color: white;
+
+    padding: 70px 10%;
+
+    text-align: center;
+}
+
+.introduction h2 {
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    margin-bottom: 25px;
+}
+
+.introduction p {
+    max-width: 900px;
+
+    margin: 0 auto 15px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 70px 8%;
+
+    text-align: center;
+
+    background-color: #eeeeee;
+}
+
+.services h2 {
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    background-color: white;
+
+    padding: 35px 20px;
+
+    border-top: 4px solid #b89b5e;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-family: Georgia, serif;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================= CALL TO ACTION ================= */
+
+.call-to-action {
+    background-color: #222222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.call-to-action h2 {
+    font-family: Georgia, serif;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.call-to-action p {
+    margin-bottom: 25px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #111111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .service-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* MOBILE PHONES */
+
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero h3 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+} /* ================= ABOUT PAGE ================= */
+
+.page-heading {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.page-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.page-heading p {
+    color: #b89b5e;
+    font-size: 18px;
+}
+
+
+/* ABOUT SECTION */
+
+.about-section {
+    background-color: white;
+    padding: 70px 10%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-section h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+
+/* MISSION AND VISION */
+
+.mission-vision {
+    background-color: #eeeeee;
+    padding: 70px 8%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.mission,
+.vision {
+    background-color: white;
+    padding: 40px;
+    border-top: 4px solid #b89b5e;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission h2,
+.vision h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+
+/* VALUES */
+
+.values {
+    background-color: white;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.values > h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.value-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background-color: #f5f5f5;
+    padding: 30px 20px;
+    border-bottom: 4px solid #b89b5e;
+}
+
+.value-card h3 {
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+
+/* ABOUT PAGE MOBILE DESIGN */
+
+@media (max-width: 900px) {
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .value-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .value-container {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading h2 {
+        font-size: 32px;
+    }
+} /* ==================================================
+   PRODUCTS PAGE
+   ================================================== */
+
+.product-introduction {
+    background-color: white;
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.product-introduction h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.product-introduction p {
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* PRODUCTS GRID */
+
+.products-section {
+    background-color: #eeeeee;
+
+    padding: 70px 8%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    background-color: white;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* PRODUCT IMAGE */
+
+.product-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* PRODUCT INFORMATION */
+
+.product-content {
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+.product-content h3 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.product-content p {
+    margin-bottom: 25px;
+
+    flex-grow: 1;
+}
+
+
+/* PRODUCTS MOBILE DESIGN */
+
+@media (max-width: 1000px) {
+
+    .products-section {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .products-section {
+        grid-template-columns: 1fr;
+
+        padding: 40px 6%;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+
+}css
+└── style.css
+/* ==================================================
+   CONTACT PAGE
+   ================================================== */
+
+.contact-section {
+    background-color: #eeeeee;
+
+    padding: 70px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-information,
+.contact-form-container {
+
+    background-color: white;
+
+    padding: 40px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-information h2,
+.contact-form-container h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.contact-detail {
+
+    margin-top: 30px;
+
+    border-left: 4px solid #b89b5e;
+
+    padding-left: 20px;
+}
+
+.contact-detail h3 {
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 8px;
+}
+
+.contact-detail a {
+
+    color: #333333;
+
+    text-decoration: none;
+}
+
+.contact-detail a:hover {
+
+    color: #b89b5e;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cccccc;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
+}
+
+.contact-form textarea {
+
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    outline: none;
+
+    border-color: #b89b5e;
+}
+
+.contact-form button {
+
+    margin-top: 20px;
+
+    padding: 14px 30px;
+
+    background-color: #222222;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+
+    background-color: #b89b5e;
+
+    color: #222222;
+}
+
+
+/* LOCATIONS */
+
+.locations {
+
+    background-color: white;
+
+    padding: 70px 8%;
+
+    text-align: center;
+}
+
+.locations h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.location-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 40px;
+}
+
+.location-card {
+
+    background-color: #f5f5f5;
+
+    padding: 35px;
+
+    border-top: 4px solid #b89b5e;
+}
+
+.location-card h3 {
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 15px;
+}
+
+
+/* MAP */
+
+.map-section {
+
+    background-color: #eeeeee;
+
+    padding: 70px 8%;
+
+    text-align: center;
+}
+
+.map-section h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.map-placeholder {
+
+    max-width: 900px;
+
+    height: 300px;
+
+    margin: 35px auto 0;
+
+    background-color: #d5d5d5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 2px solid #b89b5e;
+}
+
+.map-placeholder p {
+
+    font-size: 18px;
+}
+
+
+/* MOBILE CONTACT PAGE */
+
+@media (max-width: 800px) {
+
+    .contact-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .location-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
