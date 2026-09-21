@@ -1,6 +1,12 @@
-/* ================================
-   CSS RESET
-================================ */
+/* =========================================================
+   DEE MARBLE & GRANITE
+   Part 2 - Responsive CSS Styling
+   ========================================================= */
+
+
+/* =========================================================
+   1. CSS RESET
+   ========================================================= */
 
 * {
     margin: 0;
@@ -16,17 +22,41 @@ html {
 body {
     margin: 0;
     padding: 0;
-/* ================================
-   BASE STYLES
-================================ */
+}
+
+
+/* =========================================================
+   2. ROOT COLOUR VARIABLES
+   ========================================================= */
+
+:root {
+    --primary-color: #2f2f2f;
+    --secondary-color: #c9a227;
+    --accent-color: #f4f4f4;
+    --dark-color: #1f1f1f;
+    --light-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #dddddd;
+    --grey-color: #666666;
+}
+
+
+/* =========================================================
+   3. BASE BODY STYLING
+   ========================================================= */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: #333333;
+    color: var(--text-color);
     background-color: #f8f8f8;
 }
+
+
+/* =========================================================
+   4. GENERAL ELEMENTS
+   ========================================================= */
 
 img {
     max-width: 100%;
@@ -48,42 +78,47 @@ input,
 textarea,
 select {
     font: inherit;
-/* ================================
-   COLOUR VARIABLES
-================================ */
+}
 
-:root {
-    --primary-color: #2f2f2f;
-    --secondary-color: #c9a227;
-    --accent-color: #f4f4f4;
-    --dark-color: #1f1f1f;
-    --light-color: #ffffff;
-    --text-color: #333333;
-    --border-color: #dddddd;
-/* ================================
-   HEADER
-================================ */
+
+/* =========================================================
+   5. HEADER
+   ========================================================= */
 
 header {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 1rem 5%;
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .header-container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
+}
+
+
+/* =========================================================
+   6. LOGO / COMPANY NAME
+   ========================================================= */
+
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     color: var(--light-color);
-/* ================================
-   NAVIGATION
-================================ */
+}
+
+
+/* =========================================================
+   7. NAVIGATION
+   ========================================================= */
 
 nav ul {
     display: flex;
@@ -91,114 +126,333 @@ nav ul {
     gap: 1.5rem;
 }
 
+nav li {
+    display: block;
+}
+
 nav a {
     color: var(--light-color);
     font-size: 1rem;
     font-weight: 600;
+
     padding: 0.5rem 0.75rem;
+
     border-radius: 4px;
-    transition: 0.3s ease;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
 nav a:hover {
     background-color: var(--secondary-color);
     color: var(--dark-color);
+}
+
+
+/* Focus */
+
 nav a:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 3px;
+}
+
+
+/* Active */
+
 nav a:active {
     transform: scale(0.97);
-/* ================================
-   CONTAINER
-================================ */
+}
+
+
+/* =========================================================
+   8. GENERAL CONTAINER
+   ========================================================= */
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-/* ================================
-   HERO SECTION
-================================ */
+}
+
+
+/* =========================================================
+   9. HERO SECTION
+   ========================================================= */
 
 .hero {
-    min-height: 500px;
+    min-height: 550px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
     text-align: center;
-    padding: 4rem 5%;
-    background-color: var(--accent-color);
+    color: var(--light-color);
+
+    padding: 4rem 1.5rem;
 }
 
 .hero-content {
+    width: 90%;
     max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.2;
+
     letter-spacing: 0.03em;
+
     margin-bottom: 1rem;
 }
 
 .hero p {
     font-size: 1.2rem;
     line-height: 1.7;
-    margin-bottom: 2rem;
-/* ================================
-   BUTTONS
-================================ */
 
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-    border: 2px solid var(--secondary-color);
-    border-radius: 5px;
-    font-weight: 700;
-    transition: 0.3s ease;
+    margin-bottom: 2rem;
 }
 
+
+/* =========================================================
+   10. BUTTONS
+   ========================================================= */
+
+.button,
+.btn {
+    display: inline-block;
+
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+
+    padding: 0.8rem 1.5rem;
+
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+
+    font-weight: 700;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button hover */
+
+.button:hover,
 .btn:hover {
     background-color: var(--dark-color);
     color: var(--light-color);
-    border-color: var(--dark-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-color: var(--secondary-color);
 }
 
+
+/* Button focus */
+
+.button:focus,
 .btn:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 3px;
 }
 
+
+/* Button active */
+
+.button:active,
 .btn:active {
     transform: scale(0.97);
-/* ================================
-   PRODUCT GRID
-================================ */
+}
 
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-.product-card {
+
+/* =========================================================
+   11. GENERAL SECTIONS
+   ========================================================= */
+
+section {
+    padding: 4rem 0;
+}
+
+section:nth-child(even) {
     background-color: var(--light-color);
+}
+
+
+/* =========================================================
+   12. SECTION TITLES
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    color: var(--dark-color);
+
+    margin-bottom: 0.75rem;
+}
+
+.section-title p {
+    color: var(--grey-color);
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   13. INTRODUCTION SECTION
+   ========================================================= */
+
+.introduction {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding: 4rem 0;
+}
+
+.introduction h2 {
+    font-size: 2.2rem;
+    color: var(--dark-color);
+
+    margin-bottom: 1rem;
+}
+
+.introduction p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    max-width: 850px;
+    margin: 0 auto 1.5rem;
+}
+
+
+/* =========================================================
+   14. SERVICES SECTION
+   ========================================================= */
+
+.services {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 4rem 0;
+}
+
+.service-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--light-color);
+
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease;
+
+    padding: 2rem;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
 }
+
+
+/* Service card hover */
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    border-color: var(--secondary-color);
+}
+
+.service-card h3 {
+    color: var(--dark-color);
+
+    font-size: 1.4rem;
+
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--grey-color);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   15. PRODUCTS GRID
+   ========================================================= */
+
+.products-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--light-color);
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Product hover */
 
 .product-card:hover {
     transform: translateY(-5px);
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    border-color: var(--secondary-color);
 }
 
 .product-card img {
     width: 100%;
     height: 250px;
+
     object-fit: cover;
 }
 
@@ -208,113 +462,344 @@ nav a:active {
 
 .product-card h3 {
     font-size: 1.4rem;
+
+    color: var(--dark-color);
+
     margin-bottom: 0.75rem;
 }
 
 .product-card p {
-    font-size: 1rem;
+    color: var(--grey-color);
+
     line-height: 1.6;
-/* ================================
-   SECTIONS
-================================ */
-
-section {
-    padding: 4rem 0;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 2rem;
-}
 
-.section-title h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-}
+/* =========================================================
+   16. ABOUT PAGE
+   ========================================================= */
 
-.section-title p {
-    font-size: 1rem;
-    color: #666666;
 .about-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 3rem;
+
     align-items: center;
 }
 
-.about-image img {
+.about-grid img {
     width: 100%;
     border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .about-content h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+
+    color: var(--dark-color);
+
     margin-bottom: 1rem;
+}
+
+.about-content h3 {
+    font-size: 1.4rem;
+
+    color: var(--secondary-color);
+
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .about-content p {
     margin-bottom: 1rem;
-/* ================================
-   FORMS
-================================ */
 
-.form-container {
-    max-width: 800px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   17. CALL TO ACTION
+   ========================================================= */
+
+.call-to-action {
+    background-color: var(--dark-color);
+
+    color: var(--light-color);
+
+    text-align: center;
+
+    padding: 4rem 1.5rem;
+}
+
+.call-to-action h2 {
+    font-size: 2.2rem;
+
+    margin-bottom: 1rem;
+}
+
+.call-to-action p {
+    max-width: 700px;
+
+    margin: 0 auto 1.5rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   18. CONTACT PAGE
+   ========================================================= */
+
+.contact-container {
+    width: 90%;
+    max-width: 1100px;
     margin: 0 auto;
-    background-color: var(--light-color);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 3rem;
+}
+
+.contact-info {
+    background-color: var(--dark-color);
+
+    color: var(--light-color);
+
     padding: 2rem;
+
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    color: var(--secondary-color);
+
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+
+    line-height: 1.7;
+}
+
+.contact-info a {
+    color: var(--light-color);
+
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* =========================================================
+   19. FORMS
+   ========================================================= */
+
+form {
+    width: 100%;
 }
 
 .form-group {
     margin-bottom: 1.25rem;
 }
 
-.form-group label {
+label {
     display: block;
-    font-weight: 600;
+
+    font-weight: 700;
+
     margin-bottom: 0.5rem;
+
+    color: var(--dark-color);
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
+input,
+textarea,
+select {
     width: 100%;
+
     padding: 0.8rem;
+
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+
+    border-radius: 5px;
+
     background-color: var(--light-color);
+
+    color: var(--text-color);
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.2);
-/* ================================
-   FOOTER
-================================ */
 
-footer {
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    padding: 2rem 5%;
+/* Form focus */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: var(--secondary-color);
+
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.2);
+}
+
+textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   20. ENQUIRY PAGE
+   ========================================================= */
+
+.enquiry-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    background-color: var(--light-color);
+
+    padding: 2.5rem;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.enquiry-container h2 {
+    color: var(--dark-color);
+
+    margin-bottom: 1.5rem;
+
     text-align: center;
 }
 
+
+/* =========================================================
+   21. TABLES
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 2rem 0;
+
+    background-color: var(--light-color);
+}
+
+th,
+td {
+    padding: 0.9rem;
+
+    border: 1px solid var(--border-color);
+
+    text-align: left;
+}
+
+th {
+    background-color: var(--dark-color);
+
+    color: var(--light-color);
+
+    font-weight: 700;
+}
+
+tr:hover {
+    background-color: var(--accent-color);
+}
+
+
+/* =========================================================
+   22. FOOTER
+   ========================================================= */
+
+footer {
+    background-color: var(--dark-color);
+
+    color: var(--light-color);
+
+    text-align: center;
+
+    padding: 2rem 1rem;
+
+    margin-top: 0;
+}
+
 footer p {
+    margin-bottom: 0.5rem;
+
     font-size: 0.95rem;
-    line-height: 1.6;
-.products-grid {
-    grid-template-columns: repeat(3, 1fr);
-/* ================================
-   TABLET
-================================ */
+}
+
+footer a {
+    color: var(--secondary-color);
+
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--light-color);
+}
+
+
+/* =========================================================
+   23. RESPONSIVE IMAGES
+   ========================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   24. TABLET RESPONSIVE DESIGN
+   ========================================================= */
 
 @media (max-width: 900px) {
+
+    .header-container {
+        flex-direction: column;
+
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 0.75rem;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -322,18 +807,23 @@ footer p {
 
     .about-grid {
         grid-template-columns: 1fr;
+
+        gap: 2rem;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .contact-container {
+        grid-template-columns: 1fr;
     }
 
-    nav ul {
-        gap: 0.75rem;
+    .section-title h2 {
+        font-size: 2rem;
     }
-/* ================================
-   MOBILE
-================================ */
+}
+
+
+/* =========================================================
+   25. MOBILE RESPONSIVE DESIGN
+   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -346,24 +836,46 @@ footer p {
     }
 
     .header-container {
+        width: 100%;
+
         flex-direction: column;
+
         gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
     }
 
     nav ul {
         flex-direction: column;
+
         width: 100%;
+
         gap: 0.5rem;
+    }
+
+    nav li {
+        width: 100%;
     }
 
     nav a {
         display: block;
+
         width: 100%;
+
         text-align: center;
     }
 
     .hero {
-        min-height: 400px;
+        min-height: 450px;
+
         padding: 3rem 1rem;
     }
 
@@ -375,19 +887,155 @@ footer p {
         font-size: 1rem;
     }
 
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
+    .button,
+    .btn {
+        width: 100%;
 
-    .about-grid {
-        grid-template-columns: 1fr;
+        max-width: 300px;
     }
 
     section {
         padding: 3rem 0;
     }
 
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
     .section-title h2 {
         font-size: 1.8rem;
+    }
+
+    .introduction {
+        padding: 3rem 0;
+    }
+
+    .introduction h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+    }
+
+    .product-card img {
+        height: 220px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+    .enquiry-container {
+        padding: 1.5rem;
+    }
+
+    .call-to-action {
+        padding: 3rem 1rem;
+    }
+
+    .call-to-action h2 {
+        font-size: 1.8rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 0.6rem;
+    }
+}
+
+
+/* =========================================================
+   26. VERY SMALL MOBILE SCREENS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .product-card-content {
+        padding: 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+}
+
+
+/* =========================================================
+   27. ACCESSIBILITY
+   ========================================================= */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   28. PRINT STYLING
+   ========================================================= */
+
+@media print {
+
+    nav,
+    .button,
+    .btn {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+
+        color: black;
+    }
+
+    header,
+    footer {
+        background-color: white;
+
+        color: black;
+
+        border: none;
     }
 }
