@@ -154,3 +154,69 @@ Home
 ├── Enquiry
 │
 └── Contact
+# Dee Marble & Granite Website
+
+## Project Description
+
+Dee Marble & Granite is a responsive website designed to provide
+information about the company's marble and granite products and services.
+The website allows users to navigate between the main pages and view
+information about the company and its products.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Visual Studio Code
+- Git
+- GitHub
+
+## Part 2 Improvements
+
+The following improvements were implemented during Part 2:
+
+- Implemented an external CSS stylesheet.
+- Added a CSS reset for consistent browser styling.
+- Added a consistent colour scheme.
+- Improved typography using font-family, font-size, font-weight,
+  line-height and letter-spacing.
+- Implemented CSS Grid and Flexbox for the website layout.
+- Added visual styling including borders, backgrounds and box shadows.
+- Added hover, focus and active states to interactive elements.
+- Added responsive layouts for desktop, tablet and mobile devices.
+- Added responsive image styling.
+- Tested the website using browser developer tools at different screen sizes.
+
+## Responsive Design
+
+The website uses media queries to provide different layouts for:
+
+- Desktop
+- Tablet
+- Mobile
+
+The desktop layout uses multiple columns while smaller screen sizes
+use a single-column layout where appropriate.
+
+## Changelog
+
+### Part 2
+
+- Updated the website based on feedback received from Part 1.
+- Created and implemented an external `style.css` stylesheet.
+- Added a CSS reset and base styling.
+- Improved typography and spacing throughout the website.
+- Implemented Flexbox for header and navigation alignment.
+- Implemented CSS Grid for product and content layouts.
+- Added hover, focus and active states to interactive elements.
+- Added responsive breakpoints for tablet and mobile screen sizes.
+- Updated images to use responsive CSS sizing.
+- Tested the website at desktop, tablet and mobile screen sizes.
+
+## References
+
+- MDN Web Docs. CSS documentation.
+- MDN Web Docs. Responsive design.
+- MDN Web Docs. CSS Grid Layout.
+- MDN Web Docs. CSS Flexible Box Layout.
